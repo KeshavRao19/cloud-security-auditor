@@ -51,40 +51,36 @@ The solution consists of:
    cd ai-cloud-security-auditor
 
 2. **Backend Setup**
-
-cd backend
-pip install -r requirements.txt
+   ```bash
+   cd backend
+   pip install -r requirements.txt
 
 
 3. **Frontend Setup**
-
-cd frontend
-npm install
+   ```bash
+   cd frontend
+   npm install
 
 
 4. **Set Environment Variables**
-
+   ```bash
    AWS_ACCESS_KEY_ID
-
    AWS_SECRET_ACCESS_KEY
-
    OPENAI_API_KEY
 
 5. **Run the Application**
 
    Start backend:
-
+      ```bash
       uvicorn main:app --reload
 
 
    Start frontend:
-
+      ```bash
       npm start
 
-
-
-
 ---
+
 
 ## Usage
 1. Login to the dashboard using your credentials.
@@ -112,35 +108,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Contact
-For questions or suggestions, reach out to:
 
-- **Email**: your.email@example.com  
-- **LinkedIn**: [Your Profile](https://linkedin.com/in/yourprofile)
-
----
-
-### ✅ Included Sections:
-- High-level overview
-- Features
-- Architecture
-- Tech stack
-- Installation steps
-- Usage instructions
-- Future enhancements
-- Contribution guidelines
-- License
-- Contact info
-
----
-
-### Suggested Additions:
-✔ **Project Diagram Placeholder**: `![Architecture](docs/architecture.png)`  
-✔ **Badges Section**: At the top of the README, add shields like:
-```markdown
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Python](https://img.shields.io/badge/python-3.10%2B-yellow)
-![AWS](https://img.shields.io/badge/AWS-Supported-orange)
 
 

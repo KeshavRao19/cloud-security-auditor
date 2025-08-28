@@ -72,12 +72,12 @@ The solution consists of:
 
    Start backend:
       ```bash
-      uvicorn main:app --reload
-
+         uvicorn main:app --reload
+      ```
 
    Start frontend:
       ```bash
-      npm start
+         npm start
 
 ---
 

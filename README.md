@@ -1,4 +1,4 @@
-# AI-Powered Cloud Security Auditor
+# EC2scape: AI-Powered Cloud Security Auditor
 
 ## Overview
 The **AI-Powered Cloud Security Auditor** is an intelligent solution that automates the detection of misconfigurations in AWS cloud environments. It leverages AI to provide clear, human-readable explanations of security risks and suggests actionable fixes. The system connects to AWS using `boto3`, scans resources such as S3, IAM, and EC2 for vulnerabilities, stores the results in a database, processes them through an AI model, and displays findings in a user-friendly React dashboard. High-risk findings trigger alerts via email or Slack.

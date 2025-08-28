@@ -1,109 +1,51 @@
-EC2scape
-AI-Powered Cloud Security Auditor
-Overview
+# AI-Powered Cloud Security Auditor
 
-The AI-Powered Cloud Security Auditor is an advanced security assessment tool that scans cloud environments (AWS, Azure, GCP) for misconfigurations and vulnerabilities. It leverages AI-driven analysis to generate human-readable explanations and actionable remediation steps, helping organizations strengthen their cloud security posture.
+## Overview
+The **AI-Powered Cloud Security Auditor** is an intelligent solution that automates the detection of misconfigurations in AWS cloud environments. It leverages AI to provide clear, human-readable explanations of security risks and suggests actionable fixes. The system connects to AWS using `boto3`, scans resources such as S3, IAM, and EC2 for vulnerabilities, stores the results in a database, processes them through an AI model, and displays findings in a user-friendly React dashboard. High-risk findings trigger alerts via email or Slack.
 
-Key Features
+---
 
-Multi-Cloud Support: Analyze AWS, Azure, and GCP environments.
+## Features
+- **AWS Misconfiguration Scanning**: Identify issues in S3 buckets, IAM policies, and EC2 security groups.
+- **AI-Driven Explanations & Fixes**: Converts technical findings into simple, actionable insights.
+- **Centralized Storage**: All findings are securely stored for auditing and trend analysis.
+- **Interactive Dashboard**: Real-time visualization of misconfigurations with severity filters.
+- **Alerting System**: Sends instant notifications for critical vulnerabilities through email and Slack.
+- **Scalable & Modular Design**: Easily extendable to support other cloud providers.
 
-Automated Misconfiguration Detection: Identify risks in S3 buckets, IAM roles, EC2 instances, and more.
+---
 
-AI-Generated Insights: Convert technical findings into business-friendly explanations and recommended fixes.
+## Architecture
+The solution consists of:
+1. **AWS Scanner**: Uses `boto3` to fetch configurations from AWS services.
+2. **Database Layer**: Stores raw and processed security findings.
+3. **AI Processing Engine**: Generates explanations and remediation steps.
+4. **Frontend Dashboard**: React-based UI for visualizing findings.
+5. **Alerting System**: Logic for Slack and email notifications.
 
-Dashboard Visualization: Interactive React-based dashboard for real-time security posture monitoring.
+---
 
-Alerting Mechanism: Email and Slack notifications for high-risk findings.
+## Tech Stack
+- **Backend**: Python (`boto3`, Flask/FastAPI)
+- **AI Layer**: OpenAI GPT / HuggingFace Models
+- **Database**: PostgreSQL or MongoDB
+- **Frontend**: React with Tailwind CSS
+- **Cloud Provider**: AWS (S3, IAM, EC2)
+- **Notifications**: Slack API, SMTP (Email)
 
-Scalable Architecture: Microservices-based design with containerization support.
+---
 
-Tech Stack
+## Installation
 
-Backend: Python, FastAPI
+### Prerequisites
+- Python 3.10+
+- Node.js & npm
+- AWS account with IAM credentials
+- PostgreSQL (or MongoDB)
+- OpenAI API key (or HuggingFace token)
 
-Cloud SDKs: boto3 (AWS), azure-mgmt, google-cloud-sdk
-
-AI/ML: OpenAI GPT / LLM integration for explanation generation
-
-Database: PostgreSQL / MongoDB
-
-Frontend: React + Tailwind CSS
-
-Containerization: Docker, Kubernetes
-
-CI/CD: GitHub Actions
-
-Deployment: AWS Lambda / Azure Functions (Serverless)
-
-Project Goals
-
-Provide a free security auditing solution for SMBs and developers.
-
-Help organizations meet compliance standards (CIS Benchmarks, ISO 27001).
-
-Increase cloud security awareness with AI-powered recommendations.
-
-Installation
-
-Clone the repository:
-
-git clone https://github.com/your-username/cloud-security-auditor.git
-
-
-Navigate to the project directory:
-
-cd cloud-security-auditor
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Configure cloud provider credentials:
-
-AWS: Set up ~/.aws/credentials
-
-Azure: Provide AZURE_CLIENT_ID, AZURE_SECRET, AZURE_TENANT
-
-GCP: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
-
-Usage
-
-Run the security audit for AWS:
-
-python auditor.py --provider aws --scan all
-
-
-Run the dashboard locally:
-
-cd dashboard
-npm install
-npm start
-
-Roadmap
-
-1. AWS Misconfiguration Scanning
-
-2. Azure Support
-
-3. GCP Support
-
- 4. AI-Generated Explanations
-
- 5. Dashboard Integration
-
- 6. Alerting System
-
- 7. Compliance Reporting
-
-
-
-
-Contributions are welcome! Please fork the repository and submit a pull request for review.
-
-License
-
-This project is licensed under the MIT License. See LICENSE
- for details.
+### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/ai-cloud-security-auditor.git
+   cd ai-cloud-security-auditor
